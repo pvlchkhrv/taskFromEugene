@@ -1,25 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import s from './App.module.css';
+import {getReactRepositories} from './api/api';
+import { v1 } from 'uuid';
+import CodingTask from './CodingTask/CodingTask';
+import BonusTask from './BonusTask/BonusTask';
+
+export type ItemType = {
+  id: string
+  name: string
+  stars: number
+  forks: number
+  url: string
+}
+
+export type DataType = ItemType []
+
 
 function App() {
+
+  const [data, setData] = useState<DataType>([]);
+  const [isCollapsed, setCollapseMode] = useState(true);
+
+  useEffect(() => {
+    getReactRepositories()
+        .then((repos: DataType) => {
+          const newRepos = repos.map( (r: ItemType) =>  ({...r, id: v1()}))
+          setData(newRepos);
+        })
+  });
+
+  const onClickHandler = () => {
+    setCollapseMode(!isCollapsed);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className={s.app}>
+        <CodingTask data={data}/>
+        <BonusTask data={data}
+                   isCollapsed={isCollapsed}
+                   onClickHandler={onClickHandler}
+        />
+      </div>
   );
 }
 
