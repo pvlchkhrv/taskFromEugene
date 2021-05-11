@@ -3,7 +3,7 @@ import s from './App.module.css';
 import {getReactRepositories} from './api/api';
 import { v1 } from 'uuid';
 import CodingTask from './CodingTask/CodingTask';
-import BonusTask from './BonusTask/BonusTask';
+import {WithCollapseMode} from './BonusTask/HOC';
 
 export type ItemType = {
   id: string
@@ -19,7 +19,7 @@ export type DataType = ItemType []
 function App() {
 
   const [data, setData] = useState<DataType>([]);
-  const [isCollapsed, setCollapseMode] = useState(true);
+
 
   useEffect(() => {
     getReactRepositories()
@@ -29,17 +29,12 @@ function App() {
         })
   });
 
-  const onClickHandler = () => {
-    setCollapseMode(!isCollapsed);
-  }
+
 
   return (
       <div className={s.app}>
         <CodingTask data={data}/>
-        <BonusTask data={data}
-                   isCollapsed={isCollapsed}
-                   onClickHandler={onClickHandler}
-        />
+         <WithCollapseMode data={data} />
       </div>
   );
 }

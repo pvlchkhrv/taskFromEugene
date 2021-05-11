@@ -2,14 +2,13 @@ import React from 'react';
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from '@material-ui/core';
 import {DataType, ItemType} from '../App';
 
-type PropsType = {
+export type CodingTaskPropsType = {
     data: DataType;
 }
 
-function CodingTask(props: PropsType) {
+function CodingTask(props: CodingTaskPropsType) {
 
     const rows = props.data;
-
     return (
         <Paper elevation={3}>
             <TableContainer>
