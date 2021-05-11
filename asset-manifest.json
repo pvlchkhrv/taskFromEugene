@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/https//pvlchkhrv.github.io/taskFromEugene/static/css/main.845c42a4.chunk.css",
+    "main.js": "/https//pvlchkhrv.github.io/taskFromEugene/static/js/main.370b24d2.chunk.js",
+    "main.js.map": "/https//pvlchkhrv.github.io/taskFromEugene/static/js/main.370b24d2.chunk.js.map",
+    "runtime-main.js": "/https//pvlchkhrv.github.io/taskFromEugene/static/js/runtime-main.537c4d68.js",
+    "runtime-main.js.map": "/https//pvlchkhrv.github.io/taskFromEugene/static/js/runtime-main.537c4d68.js.map",
+    "static/js/2.dec9f8eb.chunk.js": "/https//pvlchkhrv.github.io/taskFromEugene/static/js/2.dec9f8eb.chunk.js",
+    "static/js/2.dec9f8eb.chunk.js.map": "/https//pvlchkhrv.github.io/taskFromEugene/static/js/2.dec9f8eb.chunk.js.map",
+    "static/js/3.2a1677d4.chunk.js": "/https//pvlchkhrv.github.io/taskFromEugene/static/js/3.2a1677d4.chunk.js",
+    "static/js/3.2a1677d4.chunk.js.map": "/https//pvlchkhrv.github.io/taskFromEugene/static/js/3.2a1677d4.chunk.js.map",
+    "index.html": "/https//pvlchkhrv.github.io/taskFromEugene/index.html",
+    "static/css/main.845c42a4.chunk.css.map": "/https//pvlchkhrv.github.io/taskFromEugene/static/css/main.845c42a4.chunk.css.map",
+    "static/js/2.dec9f8eb.chunk.js.LICENSE.txt": "/https//pvlchkhrv.github.io/taskFromEugene/static/js/2.dec9f8eb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.537c4d68.js",
+    "static/js/2.dec9f8eb.chunk.js",
+    "static/css/main.845c42a4.chunk.css",
+    "static/js/main.370b24d2.chunk.js"
+  ]
+}
